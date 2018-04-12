@@ -1,0 +1,23 @@
+<div ng-repeat="post in posts">
+
+    <div class="row">
+        <div class="col-sm"> {{post.id}} </div>
+        <div class="col-sm">
+            <a href="#!/posts/{{post.id}}">{{post.text}}</a>
+        </div>
+        <div class="col-sm">{{post.user.name}}</div>
+        <div class="col-sm">{{post.nature}}</div>
+        <div class="col-sm">{{post.created_at}}</div>
+    </div>
+</div>
+
+
+<form ng-submit="createPost()">
+    <input type="text" ng-model="new_post.text">
+    <select name="" id="" ng-model="new_post.nature">
+        <option value="user_post">user post </option>
+        <option value="announcement"> Announcement </option>
+        <option value="poll"> Poll</option>
+    </select>
+    <button> Post </button>
+</form>

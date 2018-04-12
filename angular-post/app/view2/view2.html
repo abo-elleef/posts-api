@@ -1,0 +1,29 @@
+<p>
+    <a href="#!/posts/">Back to all posts</a>
+</p>
+<div class="row">
+    <div class="col-sm"> ID </div>
+    <div class="col-sm"> {{post.id}}</div>
+</div>
+
+<div class="row">
+    <div class="col-sm"> Text </div>
+    <div class="col-sm"> {{post.text}}</div>
+</div>
+
+<div class="row">
+    <div class="col-sm"> Nature </div>
+    <div class="col-sm"> {{post.nature}}</div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm"> User </div>
+    <div class="col-sm"> {{post.user.name}}</div>
+</div>
+<div class="row">
+    <div class="col-sm"> Created At  </div>
+    <div class="col-sm"> {{post.created_at}}</div>
+</div>
+
+<a ng-click="deletePost(post.id)" class="btn btn-danger">Delete</a>
